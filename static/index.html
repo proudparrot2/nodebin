@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nodebin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="application.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="jquery.min.js"></script>
+    <script src="application.min.js"></script>
+  <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="content">
+  <h1>📝 Nodebin</h1>
+  <p>An easy and simple Pastebin clone built on Node.js and <a href="https://github.com/menzerath/hastebin-plus">this repository</a>.</p>
+    <pre id="code" style="display:none;" tabindex="0"><code></code></pre>
+    <textarea spellcheck="false" style="display:none;"></textarea>
+</div>
+<div id="tools">
+    <button class="save function" title="Save [Ctrl + S]"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+    <button class="new function" title="New [Ctrl + Space]"><i class="fa-solid fa-file"></i> New</button>
+    <button class="duplicate function" title="Duplicate [Ctrl + D]"><i class="fa-regular fa-clone"></i> Duplicate</button>
+    <button class="raw function" title="Raw [Ctrl + Shift + R]"><i class="fa-solid fa-file-lines"></i> Raw</button>
+</div>
+</body>
+</html>

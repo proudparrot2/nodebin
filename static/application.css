@@ -1,0 +1,13 @@
+#tools .link embed {
+	vertical-align: bottom;
+}
+
+#tools .function.enabled {
+	cursor: pointer;
+  opacity: 1;
+}
+
+#tools .function {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
