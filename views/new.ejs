@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nodebin</title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/319/memo_1f4dd.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+    <meta content="Nodebin" property="og:title" />
+    <meta content="https://nodebin.port0.org" property="og:url" />
+    <meta content="A simple and useful paste service built on NodeJS." property="og:description" />
+    <meta content="#202b38" data-react-helmet="true" name="theme-color" />
+  </head>
+
+  <body>
+    <h1>📝 Nodebin</h1>
+    <p>A simple and useful paste service built on NodeJS.</p>
+    
+    <form action="/create" method="post" id="form">
+      <label>Title</label>
+      <input id="title" type="text" name="title" required>
+
+      <label>Content</label>
+      <textarea id="content" name="content" required></textarea>
+      
+      <button disabled onclick="window.location.href = '/'">New</button>
+      <button id="save">Save</button>
+      <button disabled>Duplicate</button>
+      <button disabled>Get raw</button>    
+    </form>
+    
+  </body>
+</html>

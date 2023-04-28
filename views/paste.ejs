@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Nodebin - <%= paste.title %></title>
+  <style>
+    .hljs {
+      color: #ddd;
+      background: #161f27;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-literal,
+    .hljs-section,
+    .hljs-link {
+      color: white;
+    }
+
+
+    .hljs-subst {
+      /* default */
+    }
+
+    .hljs-string,
+    .hljs-title,
+    .hljs-name,
+    .hljs-type,
+    .hljs-attribute,
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-built_in,
+    .hljs-addition,
+    .hljs-variable,
+    .hljs-template-tag,
+    .hljs-template-variable {
+      color: #d88;
+    }
+
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-deletion,
+    .hljs-meta {
+      color: #979797;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-literal,
+    .hljs-title,
+    .hljs-section,
+    .hljs-doctag,
+    .hljs-type,
+    .hljs-name,
+    .hljs-strong {
+      font-weight: bold;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+  </style>
+  
+  <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/319/memo_1f4dd.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+  <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+  <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+
+  <meta content="Nodebin - <%= paste.title%>" property="og:title" />
+  <meta content="https://nodebin.port0.org" property="og:url" />
+  <meta content="<%= paste.content.substring(0, 100) %>..." property="og:description" />
+  <meta content="#202b38" data-react-helmet="true" name="theme-color" />
+  
+  <script>hljs.highlightAll()</script>
+</head>
+
+<body>
+  <h1>📝 Nodebin</h1>
+  <h3><%= paste.title %></h3>
+  <pre><code><%= paste.content %></code></pre> 
+  
+  <div id="buttons">
+    <button onclick="window.location.href = '/';" >New</button>
+    <button disabled>Save</button>
+    <button onclick="window.location.href = '/duplicate/<%= id %>';">Duplicate</button>
+    <button onclick="window.location.href = '/raw/<%= id %>'">Get raw</button>
+  </div>
+
+  <script>
+    // const keybindCapture = document.getElementById('keybind-capture');
+    
+    window.addEventListener('keydown', (event) => {
+        if (event.altlKey) {
+            if (event.keyCode === 83) {
+                // alt s
+            } else if (event.keyCode === 78) {
+               // alt n
+              window.location.href = '/'
+            } else if (event.keyCode === 82) {
+                window.location.href = '/duplicate/<%= id %>';
+            } else if (event.keyCode === 68) {
+                // alt d
+              window.location.href = '/raw/<%= id %>'
+            }
+        }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nodebin</title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/319/memo_1f4dd.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <script src="https://kit.fontawesome.com/e897e5d5dc.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1>📝 Nodebin</h1>
+    <form action="/save" method="post">
+      <input type="hidden" name="id" value="<%= paste._id %>">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= paste.title %>">
+      
+      <label>Content</label>
+      <textarea name="content"><%= paste.content %></textarea>
+      
+    </form>
+    <div id="buttons">
+      <button onclick="window.location.href = '/';" >New</button>
+      <button onclick="document.getElementById('form').submit()">Save</button>
+      <button disabled>Duplicate</button>
+      <button disabled>Get raw</button>
+    </div>
+  </body>
+</html>
