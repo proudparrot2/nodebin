@@ -44,7 +44,7 @@ app.post('/create', (req, res) => {
             }
         });
     }
-});
+}); 
 
 
 app.get('/bin/:id', (req, res) => {
